@@ -1,4 +1,3 @@
-// ./index.js
 
 // 1. IMPORTACIONES
 
@@ -16,6 +15,7 @@ app.use(cors())
 app.use(express.json({extended: true}))
 
 // 3. RUTEO
+app.use("/api/drinks", require("./routes/drinks"))
 app.use("/api/users", require("./routes/users"))
 app.use("/api/pets", require("./routes/pets"))
 app.use("/", require("./routes/index"))
